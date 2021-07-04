@@ -8,23 +8,21 @@ Auteur             : lp
 '''
 
 '''
-Fonctionne sous linux avec python 2.7 et opencv 2.4.13
-Ne Fonctionne pas sous windows(conda) (open cv limité à 2.4.11)
-info sur la version :
-from cv2 import __version__
-print "version opencv : ",__version__
+Fonctionne raspbian strech avec python 3.5 et opencv 3.4.4
+Fonctionne un python 3.6, un open CV 4.1.1 en utilisant Spyder dans un environnement anaconda.
 '''
 
-print "Exemple de détection de frelons sur images vidéo"
-
+print ("Exemple de détection de frelons sur images vidéo")
+from cv2 import __version__
+print ("version opencv : ",__version__)
 import cv2
   
 face_cascade = cv2.CascadeClassifier('cascadefrelon.xml')
 cap = cv2.VideoCapture('filmfrelonasiatique.mp4')
 if cap.isOpened():
-  print "vidéo chargée"
+  print ("vidéo chargée")
 else:
-  print "vidéo NON chargée"
+  print ("vidéo NON chargée")
   
 while True:
   try:
@@ -41,5 +39,5 @@ while True:
     cv2.waitKey(1)
   except:
     cv2.destroyAllWindows()
-    print "fin"
+    print ("fin")
     break
