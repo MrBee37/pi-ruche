@@ -27,7 +27,7 @@ else:
 while True:
   try:
     ret, img = cap.read()
-    cv2.imshow('Exemple detection',img)
+    #cv2.imshow('Exemple detection',img)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     
     faces = face_cascade.detectMultiScale(gray, 1.3, 12, 0, (90,60), (210,140))
