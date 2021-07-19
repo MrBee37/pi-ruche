@@ -9,7 +9,8 @@ Auteur             : lp
 
 '''
 Fonctionne raspbian strech avec python 3.5 et opencv 3.4.4
-Fonctionne un python 3.6, un open CV 4.1.1 en utilisant Spyder dans un environnement anaconda.
+Fonctionne avec un python 3.6, un open CV 4.1.1 en utilisant Spyder dans un environnement anaconda.
+Fonctionne avec un python 3.9, un open CV 4.5.3 et un spyder 5.0.5
 '''
 
 print ("Exemple de détection de frelons sur images vidéo")
@@ -27,7 +28,7 @@ else:
 while True:
   try:
     ret, img = cap.read()
-    cv2.imshow('Exemple detection',img)
+    #cv2.imshow('Exemple detection',img)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     
     faces = face_cascade.detectMultiScale(gray, 1.3, 12, 0, (90,60), (210,140))
